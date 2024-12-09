@@ -52,7 +52,7 @@ export function RoadSignFilter({
   }, [filters, onFilterChange]);
 
   return (
-    <div className="w-64 p-4 border-r">
+    <div className="max-w-52 s w-full p-4 border-r">
       <Accordion type="multiple" className="w-full">
         {categories.map((category) => (
           <AccordionItem key={category.name} value={category.name}>
