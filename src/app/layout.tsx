@@ -18,10 +18,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased dark`}>
-        <header className="flex border-b p-4">
-          <h1 className="text-lg font-bold">GeoTricks</h1>
-        </header>
-        {children}
+        <div className="h-min sm:h-screen">
+          <header className="flex border-b p-4">
+            <h1 className="text-lg font-bold">GeoTricks</h1>
+          </header>
+          {children}
+        </div>
         <footer className="border-t p-4">Images and Map locations courtesy of <Link className="text-primary hover:underline" href="https://geotips.com">GeoTips</Link></footer>
       </body>
     </html>

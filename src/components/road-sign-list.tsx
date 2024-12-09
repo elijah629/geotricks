@@ -2,11 +2,14 @@ import Image from 'next/image'
 import Link from "next/link";
 import { RoadSign } from '@/data/road-signs';
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from './ui/badge';
 import { cn } from "@/lib/utils";
 
 export function RoadSignList({ signs }: { signs: RoadSign[] }) {
   return (
-    <ScrollArea className="h-screen w-full p-4">
+    // h-[calc(100vh-61px)]. Why? The header is exactly 61 pixels tall, and this needs to account for it so it doesnt leak into the footer.
+    <ScrollArea className="h-min sm:h-[calc(100vh-61px)] w-full p-4">
+      <h1 className="text-lg font-bold mb-4 flex items-center gap-2">Road signs <Badge>{signs.length}</Badge></h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {signs.map((sign) => (
           <div key={sign.id} className={cn("border rounded-lg p-4 transition-colors flex flex-col items-center gap-2", sign.mapsUrl && "hover:bg-primary/10")}>

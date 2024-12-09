@@ -18,7 +18,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="flex">
+    <div className="flex flex-col sm:flex-row">
       <RoadSignFilter onFilterChange={handleFilterChange} />
       <main className="flex-1">
         <RoadSignList signs={filteredSigns} />

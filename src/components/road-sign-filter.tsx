@@ -9,6 +9,8 @@ import {
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { backgroundColors, iconColors, icons, roadLines, borderColors, shapes, countries } from "@/data/road-signs"
+import { ScrollArea } from "./ui/scroll-area";
+import { Badge } from "./ui/badge"
 
 interface FilterCategory {
   name: string;
@@ -52,11 +54,13 @@ export function RoadSignFilter({
   }, [filters, onFilterChange]);
 
   return (
-    <div className="max-w-52 s w-full p-4 border-r">
+    <ScrollArea className="h-min sm:h-[calc(100vh-61px)] w-full sm:w-60 p-4 border-r">
+      <h1 className="text-lg font-bold mb-1">Filters</h1>
+
       <Accordion type="multiple" className="w-full">
         {categories.map((category) => (
           <AccordionItem key={category.name} value={category.name}>
-            <AccordionTrigger>{category.displayName}</AccordionTrigger>
+            <AccordionTrigger className="flex items-center">{category.displayName}{filters[category.name].length > 0 && <Badge className="ml-auto mr-2">{filters[category.name].length}</Badge>}</AccordionTrigger>
             <AccordionContent>
               <div className="space-y-2">
                 {category.options.map((option) => (
@@ -74,7 +78,7 @@ export function RoadSignFilter({
           </AccordionItem>
         ))}
       </Accordion>
-    </div>
+    </ScrollArea>
   )
 }
 
