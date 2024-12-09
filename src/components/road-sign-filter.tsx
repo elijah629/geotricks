@@ -13,7 +13,7 @@ import { backgroundColors, iconColors, icons, roadLines, borderColors, shapes, c
 interface FilterCategory {
   name: string;
   displayName: string;
-  options: string[];
+  options: readonly string[];
 }
 
 const categories: FilterCategory[] = [
