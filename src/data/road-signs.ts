@@ -133,7 +133,6 @@ export const icons = [
   "pedestrian_stripes",
   "pedestrian_stripes_left",
   "pedestrian_dashes",
-  "pedestrian_lines",
   "pedestrian_lines_left",
 ] as const;
 export const iconColors = ["white", "black"] as const;
@@ -351,25 +350,43 @@ export const roadSigns: RoadSign[] = [
     roadLines: "17",
     imageUrl: "https://geohints.com/Sources/Signs/Pedestrian/nigeria_2.svg",
     mapsUrl: "https://goo.gl/maps/Q5AvbBrMYWhSWsjx9",
-  },/*
+  },
   {
     id: 17,
     country: "nigeria",
+    shape: "triangle",
+    backgroundColor: "white",
+    borderColor: "red",
+    iconColor: "black",
+    icon: "pedestrian_stripes",
+    roadLines: "5",
     imageUrl: "https://geohints.com/Sources/Signs/Pedestrian/nigeria_3.svg",
     mapsUrl: "https://goo.gl/maps/UXSfD9gPzhpwRgDX9",
   },
   {
     id: 18,
     country: "rwanda",
+    shape: "triangle",
+    backgroundColor: "white",
+    borderColor: "red",
+    iconColor: "black",
+    icon: "pedestrian_stripes",
+    roadLines: "5",
     imageUrl: "https://geohints.com/Sources/Signs/Pedestrian/rwanda.svg",
     mapsUrl: "https://goo.gl/maps/84W73wjEoKRMr1WV7",
   },
   {
     id: 19,
     country: "rwanda",
+    shape: "rectangle_triangle",
+    backgroundColor: "blue",
+    borderColor: "white",
+    iconColor: "black",
+    icon: "pedestrian_dashes",
+    roadLines: "15",
     imageUrl: "https://geohints.com/Sources/Signs/Pedestrian/rwanda_2.svg",
     mapsUrl: "https://goo.gl/maps/vb8ZoMwZwxawVsMB9",
-  },
+  },/*
   {
     id: 20,
     country: "rwanda",

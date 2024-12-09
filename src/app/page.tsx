@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex">
       <RoadSignFilter onFilterChange={handleFilterChange} />
-      <main className="flex-1 p-4">
+      <main className="flex-1">
         <RoadSignList signs={filteredSigns} />
       </main>
     </div>
